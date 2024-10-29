@@ -1,0 +1,296 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    display: -webkit-box; /* Flexbox para navegadores antiguos */
+    display: -ms-flexbox; /* Flexbox para Internet Explorer 10 */
+    display: flex; /* Flexbox para navegadores modernos */
+    flex-direction: column;
+    justify-content: flex-start; /* Alineación superior */
+}
+
+/* Contenedor principal con fondo degradado */
+.container {
+    margin-top: 20px; /* Margen superior */
+    text-align: center; /* Alinear texto al centro en el contenedor */
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Fondo degradado */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Párrafo dentro del contenedor */
+.container p {
+    text-align: left; /* Alinear texto del párrafo a la izquierda */
+}
+
+/* Media Query para dispositivos móviles */
+@media screen and (max-width: 900px) {
+    .container {
+        background: linear-gradient(to right, #ff6a88, #ffcc70); /* Cambiar a un degradado diferente */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        background: linear-gradient(to right, #fbc2eb, #a6c1ee); /* Cambiar a un tercer degradado */
+    }
+}
+
+/* Barra de navegación */
+header nav {
+    width: 100%;
+    background: #333;
+    padding: 10px 0;
+    display: -webkit-flex; /* Flexbox para navegadores antiguos */
+    display: -ms-flexbox; /* Flexbox para Internet Explorer 10 */
+    display: flex; /* Flexbox para navegadores modernos */
+    justify-content: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px; /* Prefijo para WebKit */
+}
+
+.nav-menu {
+    display: -webkit-flex; /* Flexbox para navegadores antiguos */
+    display: -ms-flexbox; /* Flexbox para Internet Explorer 10 */
+    display: flex; /* Flexbox para navegadores modernos */
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; /* Prefijo para WebKit */
+    -moz-transition: color 0.3s ease-in-out, -moz-transform 0.3s ease-in-out; /* Prefijo para Firefox */
+}
+
+.nav-menu a:hover {
+    color: #e74c3c;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1); /* Prefijo para WebKit */
+    -moz-transform: scale(1.1); /* Prefijo para Firefox */
+}
+
+/* Títulos */
+h1 {
+    margin-bottom: 10px; /* Espacio debajo del título */
+    text-align: left; /* Justificar a la izquierda */
+}
+
+h2 {
+    text-align: center; /* Centrar h2 */
+    margin: 20px 0; /* Espacio alrededor de h2 */
+}
+
+/* Tarjetas de contenido */
+.cards {
+    display: -webkit-flex; /* Flexbox para navegadores antiguos */
+    display: -ms-flexbox; /* Flexbox para Internet Explorer 10 */
+    display: flex; /* Flexbox para navegadores modernos */
+    display: -moz-flex; /* Flexbox para Firefox */
+    justify-content: space-around;
+    margin: 20px 194px;
+    width: 80%;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para navegadores antiguos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    -webkit-transition: -webkit-transform 0.4s ease, background-color 0.4s ease; /* Prefijo para WebKit */
+    margin: 12px;
+}
+
+.card:hover {
+    background-color: #3498db;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05); /* Prefijo para WebKit */
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    color: #333;
+}
+
+/* Botón */
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease; /* Prefijo para WebKit */
+    -moz-transition: background-color 0.3s ease, -moz-transform 0.3s ease; /* Prefijo para Firefox */
+}
+
+.btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px); /* Prefijo para WebKit */
+    -moz-transform: translateY(-5px); /* Prefijo para Firefox */
+}
+.acerca {
+    background-color: #e74c3c; /* Fondo claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px 0; /* Espacio alrededor */
+}
+/* Media Query para dispositivos móviles */
+@media screen and (max-width: 600px) {
+    .cards {
+        flex-direction: column;
+        -webkit-flex-direction: column; /* Flexbox para navegadores antiguos */
+        -ms-flex-direction: column; /* Flexbox para Internet Explorer 10 */
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        -webkit-flex-direction: column; /* Flexbox para navegadores antiguos */
+        -ms-flex-direction: column; /* Flexbox para Internet Explorer 10 */
+        -moz-flex-direction: column; /* Flexbox para Firefox */
+    }
+
+    .nav-menu a {
+        margin: 10px 0;
+    }
+}
+.acerca {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Degradado por defecto */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px 0; /* Espacio alrededor */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+/* Media queries para cambiar el fondo degradado */
+@media screen and (max-width: 900px) {
+    .acerca {
+        background: linear-gradient(to right, #ff6a88, #ffcc70); /* Cambiar a un degradado diferente */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .acerca {
+        background: linear-gradient(to right, #fbc2eb, #a6c1ee); /* Cambiar a un tercer degradado */
+    }
+}
+.contacto {
+    margin: 20px auto; /* Centramos la sección */
+    padding: 20px;
+    width: 610px; /* Ancho fijo para un diseño cuadrado */
+    background-color: #f9f9f9; /* Color de fondo claro */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para el efecto de elevación */
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto label {
+    margin-bottom: 10px;
+    margin-top: 12px;
+}
+
+.contacto input,
+.contacto textarea,
+.contacto select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contacto button {
+    padding: 10px;
+    background-color: #007bff; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto button:hover {
+    background-color: #0056b3; /* Color del botón al pasar el mouse */
+}
+/* Footer */
+footer {
+    background: linear-gradient(to right, #333, #555);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.socials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.socials li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.socials li a:hover {
+    color: #ffcc70; /* Cambia el color al pasar el mouse */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 15px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
